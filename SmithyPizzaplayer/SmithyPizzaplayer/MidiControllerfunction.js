@@ -1,0 +1,3 @@
+﻿function Myfunction(){
+    mytest = test
+}
