@@ -30,12 +30,13 @@ Partial Class Form1
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(40, 394)
+        Me.Label1.Location = New System.Drawing.Point(34, 229)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 20)
         Me.Label1.TabIndex = 0
@@ -68,7 +69,7 @@ Partial Class Form1
         '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.Filter = "MP3 files |*.mp3|All Files that is|*.*"
+        Me.OpenFileDialog1.Filter = "MP3 files |*.mp3|WAV files|*.wav|M4A Files|*.M4A|MP4 Files|*.mp4|All Files|*.*"
         '
         'TextBox1
         '
@@ -78,11 +79,21 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(668, 29)
         Me.TextBox1.TabIndex = 4
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(259, 389)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(104, 40)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Play"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(783, 441)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.HScrollBar1)
@@ -103,4 +114,5 @@ Partial Class Form1
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button1 As Button
 End Class
