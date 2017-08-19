@@ -34,7 +34,8 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         My.Computer.Audio.Play(OpenFileDialog1.FileName,
-    AudioPlayMode.WaitToComplete)
+        AudioPlayMode.Background)
     End Sub
 End Class
