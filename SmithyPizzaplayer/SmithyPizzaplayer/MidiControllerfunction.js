@@ -1,3 +1,0 @@
-﻿function Myfunction(){
-    mytest = test
-}

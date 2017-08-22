@@ -7,12 +7,14 @@ Public Class Form1
             HScrollBar1.Enabled = True
             Label1.Enabled = True
         End If
+
         TextBox1.Text = OpenFileDialog1.FileName
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Enabled = False
         HScrollBar1.Enabled = False
+
 
         TextBox1.ReadOnly = True
     End Sub
@@ -21,20 +23,24 @@ Public Class Form1
 
         'Punch your own balls if you don't know what you are doing I supposed. When a user selects a wrong file format, it will throw an error unexpectedly.'
 
+
         If (Path.GetExtension(OpenFileDialog1.FileName).ToLower() <> ".wav") Then
             Label1.Enabled = False
             HScrollBar1.Enabled = False
 
+            Button1.Enabled = False
             Throw New FormatException
         Else
 
             Return
-            If (Path.GetExtension(OpenFileDialog1.FileName).ToLower() <> ".mp3") Then
 
-                Label1.Enabled = False
-                HScrollBar1.Enabled = False
 
-            End If
+        End If
+        If (Path.GetExtension(OpenFileDialog1.FileName).ToLower() <> ".mp3") Then
+
+            Label1.Enabled = False
+            HScrollBar1.Enabled = False
+
         End If
         Return
     End Sub
@@ -42,14 +48,14 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         My.Computer.Audio.Play(OpenFileDialog1.FileName,
-        AudioPlayMode.Background)
+    AudioPlayMode.Background)
+
+
     End Sub
 
     Private Sub Midiopener_Click(sender As Object, e As EventArgs) Handles Midiopener.Click
         My.Computer.Audio.Stop()
         MsgBox("Choose Midi to Select")
-
         MidiSoundFontController.ShowDialog()
-
     End Sub
 End Class
