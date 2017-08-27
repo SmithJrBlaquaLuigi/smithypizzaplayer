@@ -34,7 +34,7 @@ Partial Class MidiSoundFontController
         Me.TrackBar11 = New System.Windows.Forms.TrackBar()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -173,12 +173,12 @@ Partial Class MidiSoundFontController
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Midi Info:"
         '
-        'TextBox1
+        'TextBox2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(38, 27)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(793, 26)
-        Me.TextBox1.TabIndex = 12
+        Me.TextBox2.Location = New System.Drawing.Point(38, 27)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(793, 26)
+        Me.TextBox2.TabIndex = 12
         '
         'Button1
         '
@@ -336,7 +336,7 @@ Partial Class MidiSoundFontController
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TrackBar11)
         Me.Controls.Add(Me.TrackBar10)
@@ -389,7 +389,7 @@ Partial Class MidiSoundFontController
     Friend WithEvents TrackBar11 As TrackBar
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
