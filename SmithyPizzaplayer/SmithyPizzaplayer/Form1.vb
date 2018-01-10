@@ -1,6 +1,8 @@
 ﻿Imports System.IO
 Imports AxWMPLib
 Imports WMPLib
+Imports Text
+Imports Linq
 Imports SmithyPizzaplayer.MidiSoundFontController
 Public Class Form1
 
@@ -16,8 +18,9 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Gah everything has been disabled, you dumb frick.'
         Label1.Enabled = False
-        HScrollBar1.Enabled = False
+        HScrollBar1.Enabled = False 
         Midiopener.Enabled = False
         TextBox1.ReadOnly = True
         Button2.Enabled = False
@@ -33,6 +36,7 @@ Public Class Form1
             HScrollBar1.Enabled = False
             Button1.Enabled = True
             Button2.Enabled = False
+            TextBox1.Clear()
 
 
             Throw New FormatException
@@ -72,19 +76,23 @@ AudioPlayMode.Background)
             If MsgBoxResult.No Then
 
                 Throw New OperationCanceledException
-
+                My.Computer.Audio.Stop()
                 Return
 
                 Midiopener.Enabled = True
                 MidiSoundFontController.ShowDialog()
-
-                My.Computer.Audio.Stop()
 
             End If
         End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        
+        My.Computer.Audio.Stop()
+        Else
+        if (OpenFileDialog1.TextBox1 != null) Then
+        Throw New NullReferenceException
+        Return
         My.Computer.Audio.Stop()
     End Sub
 End Class

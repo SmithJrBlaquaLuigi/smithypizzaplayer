@@ -34,6 +34,7 @@ Partial Class Form1
         Me.Midiopener = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -66,9 +67,9 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(34, 282)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 20)
+        Me.Label3.Size = New System.Drawing.Size(67, 20)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Volume: 0"
+        Me.Label3.Text = "Volume:"
         '
         'OpenFileDialog1
         '
@@ -115,11 +116,21 @@ Partial Class Form1
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         Me.OpenFileDialog2.Filter = "Midi Files|*.mid|All Files|*.*"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(97, 283)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(18, 20)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "0"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(783, 441)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Midiopener)
         Me.Controls.Add(Me.Button1)
@@ -147,4 +158,5 @@ Partial Class Form1
     Friend WithEvents Midiopener As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents OpenFileDialog2 As OpenFileDialog
+    Friend WithEvents Label4 As Label
 End Class
